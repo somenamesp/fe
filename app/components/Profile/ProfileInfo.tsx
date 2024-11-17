@@ -81,11 +81,11 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ avatar, user }) => {
       </div>
       <br />
       <br />
-      <div className="w-full pl-6 800px:pl-10">
+      <div className="w-full pl-6 800px:pl-10 text-black dark:text-white">
         <form onSubmit={handleSubmit}>
           <div className="m-auto block pb-4 800px:w-[50%]">
             <div className="w-full">
-              <label className="block pb-2">Full Name</label>
+              <label className="block pb-2">Họ và tên</label>
               <input
                 type="text"
                 className={`${styles.input} mb-4 800px:mb-0`}
@@ -95,7 +95,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ avatar, user }) => {
               />
             </div>
             <div className="w-full pt-2">
-              <label className="block pb-2">Email Address</label>
+              <label className="block pb-2">Địa chỉ email</label>
               <input
                 type="text"
                 readOnly
