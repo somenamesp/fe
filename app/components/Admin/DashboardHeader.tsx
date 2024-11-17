@@ -8,9 +8,12 @@ import {
 import React, { FC, useEffect, useState } from "react";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import socketIO from "socket.io-client";
-import { format } from "timeago.js";
+import { format, register } from "timeago.js";
+import vi from "timeago.js/lib/lang/vi";
 const ENDPOINT = process.env.NEXT_PUBLIC_SOCKET_SERVER_URI || "";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
+
+register("vi", vi);
 
 type Props = {
   open?: boolean;
@@ -66,7 +69,7 @@ const DashboardHeader: FC<Props> = ({ open, setOpen }) => {
       </div>
       {open && (
         <div className="absolute top-16 z-[1000000000] h-[60vh] w-[350px] overflow-y-scroll rounded border border-[#ffffff0c] bg-white px-2 py-3 shadow-xl dark:bg-[#111C43]">
-          <h5 className="p-3 text-center text-[20px] text-black dark:text-white">Notifications</h5>
+          <h5 className="p-3 text-center text-[20px] text-black dark:text-white">Thông báo</h5>
           {notifications &&
             notifications.map((item: any, index: number) => (
               <div
@@ -84,7 +87,7 @@ const DashboardHeader: FC<Props> = ({ open, setOpen }) => {
                 </div>
                 <p className="px-2 text-black dark:text-white">{item.message}</p>
                 <p className="p-2 text-[14px] text-black dark:text-white">
-                  {format(item.createdAt, "vi_VN")}
+                  {format(item.createdAt, "vi")}
                 </p>
               </div>
             ))}
