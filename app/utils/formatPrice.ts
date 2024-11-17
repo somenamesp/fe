@@ -1,3 +1,4 @@
 export const formatPrice = (price: number): string => {
-  return price.toLocaleString("vi-VN") + " ₫";
+  if (!price) return "0 ₫";
+  return price?.toLocaleString("vi-VN") + " ₫";
 };
