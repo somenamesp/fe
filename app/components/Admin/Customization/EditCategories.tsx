@@ -79,7 +79,7 @@ const EditCategories = (props: Props) => {
         <Loader />
       ) : (
         <div className="mt-[120px] text-center">
-          <h1 className={`${styles.title}`}>All Categories</h1>
+          <h1 className={`${styles.title}`}>Tất cả các danh mục</h1>
           {categories &&
             categories.map((item: any, index: number) => {
               return (
@@ -91,7 +91,7 @@ const EditCategories = (props: Props) => {
                       onChange={(e) =>
                         handleCategoriesAdd(item._id, e.target.value)
                       }
-                      placeholder="Enter category title..."
+                      placeholder="Nhập tên danh mục..."
                     />
                     <AiOutlineDelete
                       className="dark:text-white text-black text-[18px] cursor-pointer"
@@ -131,7 +131,7 @@ const EditCategories = (props: Props) => {
                 : editCategoriesHandler
             }
           >
-            Save
+            Lưu
           </div>
         </div>
       )}
