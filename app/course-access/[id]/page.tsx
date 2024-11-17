@@ -16,7 +16,7 @@ const CourseAccessPage: React.FC<CourseAccessPageProps> = ({ params }) => {
 
   useEffect(() => {
     if (data) {
-      const isPurchased = data.user?.courses.find((item: any) => item._id === id) || data.user?.role === "admin";
+      const isPurchased = data?.user?.courses.find((item: any) => item._id === id);
       if (!isPurchased) {
         redirect("/");
       }
