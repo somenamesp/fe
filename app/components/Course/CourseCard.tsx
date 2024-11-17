@@ -33,10 +33,10 @@ const CourseCard: FC<Props> = ({ item, isProfile }) => {
         <div className="flex w-full items-center justify-between pt-3">
           <div className="flex">
             <h3 className="text-black dark:text-[#fff]">
-              {item.price === 0 ? "Miễn phí" : formatPrice(item.price) + "đ"}
+              {item.price === 0 ? "Miễn phí" : formatPrice(item.price)}
             </h3>
             <h5 className="mt-[-5px] pl-3 text-[14px] text-black line-through opacity-80 dark:text-[#fff]">
-              {item.estimatedPrice && formatPrice(item.estimatedPrice) + "đ"}
+              {item.estimatedPrice && formatPrice(item.estimatedPrice)}
             </h5>
           </div>
           <div className="flex items-center pb-3">

@@ -41,10 +41,10 @@ const CoursePreview: FC<Props> = ({
         </div>
         <div className="flex items-center">
           <h1 className="pt-5 text-[25px] text-black dark:text-white">
-            {courseData?.price === 0 ? "Miễn phí" : formatPrice(courseData?.price) + "đ"}
+            {courseData?.price === 0 ? "Miễn phí" : formatPrice(courseData?.price)}
           </h1>
           <h5 className="mt-2 pl-3 text-[20px] text-black line-through opacity-80 dark:text-white">
-            {courseData?.estimatedPrice && formatPrice(courseData.estimatedPrice) + "đ"}
+            {courseData?.estimatedPrice && formatPrice(courseData.estimatedPrice)}
           </h5>
 
           <h4 className="pl-5 pt-4 text-[22px] text-black dark:text-white">
