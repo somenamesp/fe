@@ -176,7 +176,7 @@ const CourseDetails = ({
                           className="h-[50px] w-[50px] rounded-full object-cover"
                         />
                       </div>
-                      <div className="pl-2">
+                      <div className="pl-2 text-black dark:text-white">
                         <div className="flex items-center">
                           <h5 className="text-[20px]">{i.user.name}</h5>{" "}
                           <VscVerifiedFilled className="ml-2 text-[20px] text-[#0095F6]" />
