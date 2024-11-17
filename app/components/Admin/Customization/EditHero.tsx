@@ -115,7 +115,7 @@ const EditHero: FC<Props> = (props: Props) => {
                 : () => null
             }
           >
-            Save
+            Lưu
           </div>
         </div>
       </div>
