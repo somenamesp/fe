@@ -158,7 +158,7 @@ const EditFaq = (props: Props) => {
                 : handleEdit
             }
           >
-            Save
+            Lưu
           </div>
         </div>
       )}
