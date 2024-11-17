@@ -101,7 +101,7 @@ const EditFaq = (props: Props) => {
                         className={`${styles.input} border-none`}
                         value={q.question}
                         onChange={(e: any) => handleQuestionChange(q._id, e.target.value)}
-                        placeholder={"Add your question..."}
+                        placeholder={"Thêm câu hỏi..."}
                       />
 
                       <span className="ml-6 flex-shrink-0">
@@ -119,7 +119,7 @@ const EditFaq = (props: Props) => {
                         className={`${styles.input} border-none`}
                         value={q.answer}
                         onChange={(e: any) => handleAnswerChange(q._id, e.target.value)}
-                        placeholder={"Add your answer..."}
+                        placeholder={"Thêm câu trả lời..."}
                       />
                       <span className="ml-6 flex-shrink-0">
                         <AiOutlineDelete
