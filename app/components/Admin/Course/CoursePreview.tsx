@@ -3,6 +3,7 @@ import CoursePlayer from "../../../utils/CoursePlayer";
 import { styles } from "../../../../app/styles/style";
 import Ratings from "../../../../app/utils/Ratings";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import { formatPrice } from "@/app/utils/formatPrice";
 
 type Props = {
   active: number;
@@ -40,10 +41,10 @@ const CoursePreview: FC<Props> = ({
         </div>
         <div className="flex items-center">
           <h1 className="pt-5 text-[25px] text-black dark:text-white">
-            {courseData?.price === 0 ? "Miễn phí" : courseData?.price + "$"}
+            {courseData?.price === 0 ? "Miễn phí" : formatPrice(courseData?.price) + "đ"}
           </h1>
           <h5 className="mt-2 pl-3 text-[20px] text-black line-through opacity-80 dark:text-white">
-            {courseData?.estimatedPrice}$
+            {courseData?.estimatedPrice && formatPrice(courseData.estimatedPrice) + "đ"}
           </h5>
 
           <h4 className="pl-5 pt-4 text-[22px] text-black dark:text-white">

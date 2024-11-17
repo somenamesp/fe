@@ -195,10 +195,10 @@ const CourseDetails = ({
               <CoursePlayer videoUrl={data?.demoUrl} title={data?.title} />
               <div className="flex items-center">
                 <h1 className="pt-5 text-[25px] text-black dark:text-white">
-                  {data.price === 0 ? "Miễn phí" : formatPrice(data?.price)}
+                  {data.price === 0 ? "Miễn phí" : formatPrice(data?.price) + "đ"}
                 </h1>
                 <h5 className="mt-2 pl-3 text-[20px] text-black line-through opacity-80 dark:text-white">
-                  {data.estimatedPrice && formatPrice(data.estimatedPrice)}
+                  {data.estimatedPrice && formatPrice(data.estimatedPrice) + "đ"}
                 </h5>
 
                 <h4 className="pl-5 pt-4 text-[22px] text-black dark:text-white">
